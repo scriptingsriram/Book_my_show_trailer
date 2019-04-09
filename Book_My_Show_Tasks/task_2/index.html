@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Movie Trailers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <div class="container" style="height: 160px;">
+            <span class=" tittle" style="  color: lightgray">Movie Trilers</span>
+    </div>
+    <div class="container" style="background-color: #1c1c1c">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-4 col-md-offset-7 col-sm-5 col-sm-offset-7 col-xs-4 col-xs-offset-7">
+                <div class="form-group">
+                    <!-- <label class="control-label " for="TrailerLang">Movie Language</label> -->
+                    <div class="col-sm-8 col-md-8 col-xs-10">
+                        <select id="TrailerLang" class="form-control" onchange="changeLanguage()">
+                            <option>Choose Language</option>
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Telugu</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 65px">
+            <div class="col-md-12 col-sm-12" style="height: auto; ">
+                <div class="col-md-12 col-sm-12 movies-list" id='main-parent'>
+
+
+                    <div class="row" id="row1">
+
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-load1"
+                            style="display: none;  margin-bottom: 40px;">
+
+                            <span title="close" class="close" ></span>
+                            <div class='col-md-7 col-sm-7 col-xs-7 movie-trail' id='youtube-frame'>
+                                <iframe  width='720' height='445' src="" frameborder="0"   style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);" allow="autoplay;" allowfullscreen
+                                    id="video-frame"></iframe>
+                            </div>
+                            <div class='col-md-4 col-sm-4 col-xs-4 movie-desc' id='movie-dec'>
+                                <div class='col-md-12 col-sm-12 col-xs-12' style='    background-color: black;
+                                position: relative;
+                                top: 8px;
+                                left: 90px; box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+                                min-height: 430px;' id='desc-main'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 movie-qoute' id='about-movie'>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' class='main-movie-name' id='movie-name'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' id='movie-language'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12 gener ' id='movie-gener'>
+
+                                        </div>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 date-release' id='movie-release'>
+                                      
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 block' id='movie-about'>
+                                        <blockquote class='col-md-12 col-sm-12 col-xs-12 about-Event ' id='movie-titleDesc'>
+                                        </blockquote>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12'></div>
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-click1">
+
+
+                            <!-- 1st in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2 trailer-items"
+                                id="list-1">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00090482" onclick="playTrailer(ET00090482)">
+                                        <img src="./img/ET00090482.jpg" class="img-responsive img-hover" alt="Avengers-Endgame"
+                                            title="Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner">
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Avengers-Endgame</span>
+                                </div>
+                            </div>
+
+                            <!-- 2nd in 1st  -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="list-2">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00086118" onclick="playTrailer(ET00086118)">
+                                        <img src="./img/ET00086118.jpg" class="img-hover img-responsive" alt="Maharshi"
+                                            title="A kindhearted Arabian street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make the deepest wishes come true.">
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Aladdin</span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 3rd in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="list-3">
+                                <div class="trailer-image" s>
+                                    <a class="video-link" id="ET00058524" onclick="playTrailer(ET00058524)">
+                                        <img src="./img/ET00058524.jpg" class="img-hover img-responsive"
+                                            alt="Blackboard VS Whiteboard"
+                                            title="The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force.">
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>X-Men: Dark Phoenix</span>
+                                </div>
+                            </div>
+
+                            <!-- 4th in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="list-4">
+                                <div class="trailer-image" class="hover-ele">
+                                    <a class="video-link" id="ET00078437" onclick="playTrailer(ET00078437)">
+                                        <img src="./img/ET00078437.jpg" class="img-hover img-responsive" alt="Marudhar Express"
+                                            title="Peter Parker's relaxing European vacation takes an unexpected turn when Nick Fury suddenly shows up in his hotel room. Parker soon finds himself donning the Spider-Man suit to help Fury stop the evil Mysterio from wreaking havoc across the continent. ">
+                                        <div class="play-icon text-content ripple">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Spider-Man: Far From Home</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row" id="row2">
+                        <!-- video show part -->
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-load2"
+                            style="display: none;  margin-bottom: 40px;">
+
+                            <span class='close'title="close"></span>
+
+                            <div class='col-md-7 col-sm-7 col-xs-7 movie-trail' id='youtube-frame-second-1'>
+                                <iframe allow="autoplay;" width='720' height='445' src='' id='video-play-second' frameborder="0" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);" ></iframe>
+                            </div>
+                            <div class='col-md-4 col-sm-4 col-xs-4 movie-desc' id='movie-dec-second'>
+                                <div class='col-md-12 col-sm-12 col-xs-12' style=' box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);  background-color: black;
+                                position: relative;
+                                top: 8px;
+                                left: 90px;
+                                min-height: 430px;' id='second-movie-desc'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 movie-qoute' id='second-about-movie'>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' class='main-movie-name' id='second-movie-name'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' id='second-movie-lang'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12 gener' id='second-movie-genre'>
+
+                                        </div>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 date-release' id='second-movie-release'>
+
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 block' id='second-movie-description'>
+                                        <blockquote class='col-md-12 col-sm-12 col-xs-12 about-Event' id='second-block'>
+                                        </blockquote>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12'></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- video choosen part -->
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-click2">
+
+
+                            <!-- 1st in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2 trailer-items"
+                                id="second-list-1">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00074273" onclick="playTrailer(ET00074273)">
+                                        <img src="./img/ET00074273.jpg" class=" img-responsive  img-hover" alt="Kalank"
+                                            title="Kalank, a period film, set in pre-independent India is a story about an elite family and many of its hidden truths that begin to unfold as communal tensions rise and partition nears. Caught in this situation are Dev, Satya, Roop, and Zafar who find themselves in this battlefield of love.">
+                                        <!-- <div class="play-icon text-content"> -->
+
+
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Kalank</span>
+                                </div>
+                            </div>
+
+                            <!-- 2nd in 1st  -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="second-list-2">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00098578" onclick="playTrailer(ET00098578)">
+                                        <img src="./img/ET00098578.jpg" class="img-responsive  img-hover" alt="Miracle"
+                                            title="Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control -- all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness">
+
+
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Five Feet Apart</span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 3rd in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="second-list-3">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00098532" onclick="playTrailer(ET00098532)">
+                                        <img src="./img/ET00098532.jpg" class="img-responsive  img-hover" alt="After"
+                                            title="Tessa Young is a dedicated student, dutiful daughter and loyal girlfriend to her high school sweetheart. Entering her first semester of college, Tessa's guarded world opens up when she meets Hardin Scott, a mysterious and brooding rebel who makes her question all she thought she knew about herself -- and what she wants out of life.">
+                                        <div class="play-icon text-content">
+
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>After</span>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th in 1st row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="second-list-4">
+                                <div class="trailer-image">
+                                    <a class="video-link" id="ET00086600" onclick="playTrailer(ET00086600)">
+                                        <img src="./img/ET00086600.jpg" class="img-responsive  img-hover"
+                                            alt="The Curse Of The Weeping Woman"
+                                            title="In 1970s Los Angeles, the legendary ghost La Llorona is stalking the night -- and the children. Ignoring the eerie warning of a troubled mother, a social worker and her own kids are drawn into a frightening supernatural realm. Their only hope of surviving La Llorona's deadly wrath is a disillusioned priest who practices mysticism to keep evil at bay">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>The Curse Of The Weeping Woman</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="row3">
+                        <!-- video show part -->
+                        <!--  -->
+                        <div class="col-md-12 col-sm-12 col-xs-12 img-responsive" id="trailer-load3"
+                            style="display: none; margin-bottom: 40px;">
+
+
+                            <span class='close'title="close"></span>
+
+                            <div class='col-md-7 col-sm-7 col-xs-7 movie-trail' id='youtube-frame-middle'>
+                                <iframe allow="autoplay;" width='720' height='445' src='' id='middle-main-play' style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);" frameBorder="0"></iframe>
+                            </div>
+                            <div class='col-md-4 col-sm-4 col-xs-4 movie-desc' id='movie-dec-middle' style="">
+                                <div class='col-md-12 col-sm-12 col-xs-12' style='   background-color: black;
+                                position: relative;
+                                top: 8px;
+                                left: 90px;
+                                min-height: 430px; box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); ' id="middle-movie-desc">
+                                    <div class='col-md-12 col-sm-12 col-xs-12 movie-qoute' id='about-movie-middle'>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' class='main-movie-name' id='middle-movie-name'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' id='middle-movie-lang'></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12 gener' id='middle-movie-genre'>
+
+                                        </div>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 date-release' id='middle-movie-release'>
+
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 block' id='middle-movie-title'>
+                                        <blockquote class='col-md-12 col-sm-12 col-xs-12 about-Event' id='block-desc'></blockquote>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12'></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- video choosen part -->
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-click3">
+
+
+                            <!-- 1st in 3rd row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2 trailer-items"
+                                id="middle-list-1">
+                                <div class="trailer-image">
+                                    <a style="cursor: pointer;" class="video-link" id="ET00098171"
+                                        onclick="playTrailer(ET00098171)">
+                                        <img src="./img/ET00098171.jpg" class="img-responsive  img-hover" alt="Tarikh"
+                                            title="
+                                                A profound examination of life, death, hope and immortality, Tarikh gives us a peep into the inner worlds and beliefs of three people: Anirban an idealist, Ira a conformist and Rudrangshu a realist; all of whom are bound by friendship. roles">
+
+
+
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Tarikh</span>
+                                </div>
+                            </div>
+
+                            <!-- 2nd in 3rd row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="middle-list-2">
+                                <div class="trailer-image">
+                                    <a style="cursor: pointer;" class="video-link" id="ET00096267"
+                                        onclick="playTrailer(ET00096267)">
+                                        <img src="./img/ET00096267.jpg" class="img-responsive  img-hover" alt="Vinci Da"
+                                            title="Vinci Da is an upcoming Indian Bengali thriller film directed by Srijit Mukherji, under the banner of SVF Entertainment Pvt Ltd, starring Ritwick Chakraborty, Rudranil Ghosh, Anirban Bhattacharya, Riddhi Sen and Sohini Sarkar">
+
+
+
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Vinci Da</span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 3rd in 3rd row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="middle-list-3">
+                                <div class="trailer-image">
+                                    <a style="cursor: pointer;" class="video-link" id="ET00082993"
+                                        onclick="playTrailer(ET00082993)">
+                                        <img src="./img/ET00082993.jpg" class="img-responsive  img-hover" alt="Manje Bistre 2"
+                                            title="Manje Bistre 2 is a Punjabi movie starring Gippy Grewal in prominent roles. It is a drama directed by Baljit Singh Deo with Gippy Grewal as writer, forming part of the crew.">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Manje Bistre 2</span>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th in 3rd row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="middle-list-4">
+                                <div class="trailer-image" s>
+                                    <a style="cursor: pointer;" class="video-link" id="ET00081507"
+                                        onclick="playTrailer(ET00081507)">
+                                        <img src="./img/ET00081507.jpg" class="img-responsive  img-hover" alt="Madhuraraja"
+                                            title="It is the story which narrates the history of raja ,the story is about a don in madhura raja and his actions.">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Madhuraraja</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row" id="row4">
+                        <div class="col-md-12 col-sm-12 col-xs-12 img-resconsive " id="trailer-load4"
+                            style="display: none;  margin-bottom: 40px;">
+
+
+                            <span class='close' title="close"></span>
+
+                            <div class='col-md-7 col-sm-7 col-xs-7 movie-trail' id='youtube-frame-last-1'>
+                                <iframe allow="autoplay;" width='720' height='445' src='' id="last-frame-1" frameBorder="0" style="
+                                    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"></iframe>
+                            </div>
+
+                            <div class='col-md-4 col-sm-4 col-xs-4 movie-desc' id='movie-dec-last-1'>
+                                <div class='col-md-12 col-sm-12 col-xs-12' style=' background-color: black;
+                                position: relative;
+                                top: 8px;
+                                left: 90px;
+                                min-height: 430px; box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);'
+                                    id='last-desc-main'>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 movie-qoute' id="last-about-movie">
+                                        <div class='col-md-12 col-sm-12 col-xs-12' class='main-movie-name' id="last-movie-name">  </div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12' id="last-movie-lang"></div>
+                                        <div class='col-md-12 col-sm-12 col-xs-12 gener' id="last-movie-genre">
+
+                                        </div>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 date-release' id='last-movie-release'>
+
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12 block' id='last-title'>
+                                        <blockquote class='col-md-12 col-sm-12 col-xs-12 about-Event' id='block-last'></blockquote>
+                                    </div>
+                                    <div class='col-md-12 col-sm-12 col-xs-12'></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="trailer-click4">
+
+
+                            <!-- 1st in 5th  row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2 trailer-items"
+                                id="last-list-1">
+                                <div class="trailer-image">
+                                    <a style="cursor: pointer;" class="video-link" id="ET00095100"
+                                        onclick="playTrailer(ET00095100)">
+                                        <img src="./img/ET00095100.jpg" class="img-responsive  img-hover" alt="Wedding Cha Shinema"
+                                            title="An aspiring filmmaker from Mumbai reluctantly takes up the assignment of filming the wedding festivities in a small town in western Maharashtra. Once she gets there, she is drawn into the celebration, chaos and drama surrounding the family gathering. At the end of the crazy ride, both the big city filmmaker and the small town folks may have something to learn from each other..">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Wedding Cha Shinema</span>
+                                </div>
+                            </div>
+
+                            <!-- 2nd in 5th row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="last-list-2">
+                                <div class="trailer-image" s>
+                                    <a style="cursor: pointer;" class="video-link" id="ET00095554"
+                                        onclick="playTrailer(ET00095554)">
+                                        <img src="./img/ET00095554.jpg" class="img-responsive  img-hover"
+                                            alt="Hridayi Vasant Phultana"
+                                            title="Hridayi Vasant Phultana is a Marathi movie starring Prathamesh Parab and Ritika Shrotri in prominent roles. The movie also stars Abhijit Amkar and Pranali Bhalerao. It is a drama directed by Milind Kavade.">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Hridayi Vasant Phultana</span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 3rd in 5th row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="last-list-3">
+                                <div class="trailer-image" s>
+                                    <a style="cursor: pointer;" class="video-link" id="ET00069632"
+                                        onclick="playTrailer(ET00069632)">
+                                        <img src="./img/ET00069632.jpg" class="img-responsive  img-hover" alt="Night Out"
+                                            title="Kaalidas is an upcoming Indian Tamil film written and directed by Sri Senthil. The film features Bharath and Iniya in the lead roles, while Suresh Chandra Menon, Jackie Shroff, and Rajendran portray other pivotal roles">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Kaalidas</span>
+                                </div>
+                            </div>
+
+
+                            <!-- 4th in 5th row -->
+                            <div class="col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4 col-xs-offset-2  trailer-items"
+                                id="last-list-4">
+                                <div class="trailer-image">
+                                    <a style="cursor: pointer;" class="video-link" id="ET00067133"
+                                        onclick="playTrailer(ET00067133)">
+                                        <img src="./img/ET00067133.jpg" class="img-responsive img-hover" alt="Kavaludaari"
+                                            title="Two Bangalore cops while investigating an old case, their intelligence, resolve and morals are put to test">
+                                        <div class="play-icon text-content">
+                                            <i class="fa fa-play"></i>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="trailer-name">
+                                    <span>Kavaludaari</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./jss/jquery.js"></script>
+    <script src="./jss/bootstrap.min.js"></script>
+    <script src="./jss/main.js"></script>
+    <!-- dropdown script -->
+    <!-- <script>
+        $('.dropdown').on('click', '.dropdown-menu li a', function () {
+            var target = $(this).html();
+
+            //Adds active class to selected item
+            $(this).parents('.dropdown-menu').find('li').removeClass('active');
+            $(this).parent('li').addClass('active');
+
+            //Displays selected text on dropdown-toggle button
+            $(this).parents('.dropdown').find('.dropdown-toggle').html(target + ' <span class="caret"></span>');
+        });
+
+
+    </script> -->
+ 
+</body>
+
+</html>
