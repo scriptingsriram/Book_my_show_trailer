@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div class="container" style="height: 150px;"></div>
+<div class="container">
+    <div class="row">
+
+        <h3> Use ',' (For) multiple values and '-' for range values </h3>
+        <div class="col-md-12 col-sm-12-col-xs-12 main">
+            <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+                <form>
+                    <div class="form-group">
+                        <label for="userValues">Number</label>
+                        <input type="text" class="form-control" id="userValues" placeholder="Enter Value" name="txt">
+                    </div>
+
+                    <button type="button" class="btn btn-default" onclick="checking()">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container" id='content-id' style="display: none;">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+            <h2>Duplicates:</h2>
+            <ul id='duplicate-id'>
+  
+            </ul>  
+        </div>
+       
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+          <h2>Final Unique Array:</h2>
+          <ul id='unique-id'>
+  
+          </ul>  
+      </div>
+     
+  </div>
+</div>
+ 
+
+
+     
+
+
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
